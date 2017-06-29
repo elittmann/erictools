@@ -2,7 +2,7 @@
 #'
 #'This function reads uparse output files from the specified directory and generates a 16S abundance plot at the species level
 #'
-#' @param dir Directory containing the uparse output files (otu table in biom format, fasta of otu reps, taxonomy table, phylogenetic tree)
+#' @param dir Directory containing the uparse output files (otu table in biom format, fasta of otu reps, taxonomy table, phylogenetic tree). Should be string ie "~/Downloads"
 #' @param threshold Minimum number of sequences required for labeling taxons at species level
 #' @param taxtextsize Font size of labeled taxons
 #' @param labeltextsize Font size of sample labels on the x axis
