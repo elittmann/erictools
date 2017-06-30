@@ -7,6 +7,7 @@
 #' data[[2]] = pathabu (pathway abundance table)
 #' data[[3]] = pathcov (pathway coverage table)
 #' 
+#' Requires pbapply and stringr libraries
 #' @examples 
 #' a <- "/Volumes/castoricenter/Eric.Littmann/U01/Processed_Data/Humann2/"
 #' data <- humann2_readin(a)
