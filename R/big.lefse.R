@@ -1,11 +1,11 @@
 #' Big Lefse function
-#' 
+#'
 #' Convert melted taxonomy file into Lefse formatted .txt file
-#' 
-#' 
-#' 
-#' 
-
+#'
+#'
+#'
+#'
+#'
 
 big.lefse <- function(t,dictionary,filename="galaxy_lefse.txt"){
   xx <- t %>% group_by(sample,Kingdom) %>% summarise(pctseqs=sum(pctseqs))
