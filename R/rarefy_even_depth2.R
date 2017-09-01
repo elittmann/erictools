@@ -1,5 +1,4 @@
 #' Rarefy Even Depth 2
-#'
 #' This function fixes an issue in phyloseq's rarefy even depth function that failed to resample when samples were below seq threshold
 #' @export
 rarefy_even_depth2 <- function (physeq, sample.size = min(sample_sums(physeq)), rngseed = FALSE,

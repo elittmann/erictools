@@ -1,7 +1,5 @@
 #' CLR transformation function
-#'
 #' Performs centered log ratio transformation to normalize count data
-#'
 #' @examples
 #' t <- get.otu.melt(phy)
 #' t %>%
