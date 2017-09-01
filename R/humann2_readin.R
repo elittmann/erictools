@@ -1,18 +1,18 @@
 #' Humann2 Output Read In
-#' 
+#'
 #' Read in all output files for any number of samples into a list of dataframes, containing gene abundances, pathway abundances, and pathway coverage for each sample
-#' 
+#'
 #' Output information:
 #' data[[1]] = genefam (gene family abundance table)
 #' data[[2]] = pathabu (pathway abundance table)
 #' data[[3]] = pathcov (pathway coverage table)
-#' 
+#'
 #' Requires pbapply and stringr libraries
-#' @examples 
+#' @examples
 #' a <- "/Volumes/castoricenter/Eric.Littmann/U01/Processed_Data/Humann2/"
 #' data <- humann2_readin(a)
-#' 
-
+#'
+#' @export
 
 humann2_readin <- function(file_dir){
   #requires plyr and dplyr, load plyr first
@@ -31,16 +31,16 @@ humann2_readin <- function(file_dir){
     colnames(yy)[1] <- "Variable"
     return(yy)
   }
-  
+
   #coerces all data into a big list of dataframes:
-  
+
   data <- ldply(pblapply(pblapply(dir(),read.delim),humann2process),data.frame) %>%
     mutate(type=gsub("X..","",type))
   print("creating list of dataframes...")
   #return(data)
   datalist <- NULL
   datalist[[1]] <- data %>% filter(type=="Gene.Family")
-  path <- data %>% filter(type=="Pathway") %>% 
+  path <- data %>% filter(type=="Pathway") %>%
     mutate(subtype=str_extract(sample,"Abundance|Coverage"),
            pathwayname=str_extract(Variable,".+\\:"),
            pathwayname=gsub("\\:","",pathwayname),

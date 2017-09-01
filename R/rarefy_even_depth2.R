@@ -1,7 +1,8 @@
 #' Rarefy Even Depth 2
-#' 
+#'
 #' This function fixes an issue in phyloseq's rarefy even depth function that failed to resample when samples were below seq threshold
-rarefy_even_depth2 <- function (physeq, sample.size = min(sample_sums(physeq)), rngseed = FALSE, 
+#' @export
+rarefy_even_depth2 <- function (physeq, sample.size = min(sample_sums(physeq)), rngseed = FALSE,
                                 replace = TRUE, trimOTUs = TRUE, verbose = TRUE) {
   rarefaction_subsample <- function (x, sample.size, replace = FALSE) {
     rarvec <- numeric(length(x))
@@ -27,14 +28,14 @@ rarefy_even_depth2 <- function (physeq, sample.size = min(sample_sums(physeq)), 
     if (verbose) {
       message("`set.seed(", rngseed, ")` was used to initialize repeatable random subsampling.")
       message("Please record this for your records so others can reproduce.")
-      message("Try `set.seed(", rngseed, "); .Random.seed` for the full vector", 
+      message("Try `set.seed(", rngseed, "); .Random.seed` for the full vector",
               sep = "")
       message("...")
     }
   }
   else if (verbose) {
-    message("You set `rngseed` to FALSE. Make sure you've set & recorded\n", 
-            " the random seed of your session for reproducibility.\n", 
+    message("You set `rngseed` to FALSE. Make sure you've set & recorded\n",
+            " the random seed of your session for reproducibility.\n",
             "See `?set.seed`\n")
     message("...")
   }
@@ -53,14 +54,14 @@ rarefy_even_depth2 <- function (physeq, sample.size = min(sample_sums(physeq)), 
       message(rmsamples[1:min(5, length(rmsamples))], sep = "\t")
       message("...")
     }
-    physeq = prune_samples(setdiff(sample_names(physeq), 
+    physeq = prune_samples(setdiff(sample_names(physeq),
                                    rmsamples), physeq)
   }
   newsub <- physeq
   if (!taxa_are_rows(newsub)) {
     newsub <- t(newsub)
   }
-  newotu <- apply(otu_table(newsub), 2, rarefaction_subsample, 
+  newotu <- apply(otu_table(newsub), 2, rarefaction_subsample,
                   sample.size = sample.size, replace = replace)
   rownames(newotu) <- taxa_names(physeq)
   otu_table(newsub) <- otu_table(newotu, TRUE)
@@ -68,11 +69,11 @@ rarefy_even_depth2 <- function (physeq, sample.size = min(sample_sums(physeq)), 
     rmtaxa = taxa_names(newsub)[taxa_sums(newsub) <= 0]
     if (length(rmtaxa) > 0) {
       if (verbose) {
-        message(length(rmtaxa), "OTUs were removed because they are no longer \n", 
+        message(length(rmtaxa), "OTUs were removed because they are no longer \n",
                 "present in any sample after random subsampling\n")
         message("...")
       }
-      newsub = prune_taxa(setdiff(taxa_names(newsub), rmtaxa), 
+      newsub = prune_taxa(setdiff(taxa_names(newsub), rmtaxa),
                           newsub)
     }
   }

@@ -6,7 +6,7 @@
 #'
 #'
 #'
-
+#' @export
 big.lefse <- function(t,dictionary,filename="galaxy_lefse.txt"){
   xx <- t %>% group_by(sample,Kingdom) %>% summarise(pctseqs=sum(pctseqs))
   colnames(xx) <- c("sample","taxonall","pctseqs")
