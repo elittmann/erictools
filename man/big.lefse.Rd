@@ -2,10 +2,12 @@
 % Please edit documentation in R/big.lefse.R
 \name{big.lefse}
 \alias{big.lefse}
-\title{Big Lefse function}
+\title{Big Lefse function
+Convert melted taxonomy file into Lefse formatted .txt file}
 \usage{
 big.lefse(t, dictionary, filename = "galaxy_lefse.txt")
 }
 \description{
+Big Lefse function
 Convert melted taxonomy file into Lefse formatted .txt file
 }

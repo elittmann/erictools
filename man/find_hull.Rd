@@ -2,11 +2,13 @@
 % Please edit documentation in R/find_hull.R
 \name{find_hull}
 \alias{find_hull}
-\title{find hull function}
+\title{find hull function
+this function finds convex hull to draw polygons onto 2d pcoa plots per group}
 \usage{
 find_hull(df)
 }
 \description{
+find hull function
 this function finds convex hull to draw polygons onto 2d pcoa plots per group
 }
 \examples{
@@ -15,9 +17,9 @@ df <- as.data.frame(as.matrix(ord$vectors))
 df$sample <- row.names(df)
 df <- df \%>\%
   left_join(samp)
-  
+
   hulls <- ddply(df,"area",fund_hull)
-  
+
   #sample plot:
   df \%>\%
 ggplot(aes(x=Axis.1,y=Axis.2)) +

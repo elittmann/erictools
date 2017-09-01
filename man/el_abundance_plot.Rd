@@ -2,7 +2,8 @@
 % Please edit documentation in R/el_abundance_plot.R
 \name{el_abundance_plot}
 \alias{el_abundance_plot}
-\title{General 16S Abundance Plot}
+\title{General 16S Abundance Plot
+This function reads uparse output files from the specified directory and generates a 16S abundance plot at the species level}
 \usage{
 el_abundance_plot(dir, threshold = 100, taxtextsize = 3,
   labeltextsize = 12)
@@ -17,5 +18,6 @@ el_abundance_plot(dir, threshold = 100, taxtextsize = 3,
 \item{labeltextsize}{Font size of sample labels on the x axis}
 }
 \description{
+General 16S Abundance Plot
 This function reads uparse output files from the specified directory and generates a 16S abundance plot at the species level
 }

@@ -2,11 +2,13 @@
 % Please edit documentation in R/otunames.R
 \name{otunames}
 \alias{otunames}
-\title{otu names function}
+\title{otu names function
+this function adds numbers to the front of otu numbers to keep them unique when combining phyloseq objects from different runs}
 \usage{
 otunames(x, n)
 }
 \description{
+otu names function
 this function adds numbers to the front of otu numbers to keep them unique when combining phyloseq objects from different runs
 }
 \examples{
@@ -16,5 +18,4 @@ newotu <- otunames("0000",otu_table(mothurphy2))
 newtax <- otunames("0000",tax_table(mothurphy2))
 mothurphy2 <- phyloseq(newotu,newtax)
 phy <- merge_phyloseq(mothurphy,mothurphy2)
-
 }

@@ -32,3 +32,5 @@ NULL
 #" @seealso \code{\link{cdiff.method}}
 #" @author Eric Littmann
 #" @export
+
+#roxygen2::roxygenise(package.dir = "~/Documents/erictools/")

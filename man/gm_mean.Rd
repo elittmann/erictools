@@ -2,11 +2,13 @@
 % Please edit documentation in R/clr.R
 \name{gm_mean}
 \alias{gm_mean}
-\title{CLR transformation function}
+\title{CLR transformation function
+Performs centered log ratio transformation to normalize count data}
 \usage{
 gm_mean(x, na.rm = TRUE)
 }
 \description{
+CLR transformation function
 Performs centered log ratio transformation to normalize count data
 }
 \examples{

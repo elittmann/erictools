@@ -2,10 +2,12 @@
 % Please edit documentation in R/extract_legend.R
 \name{extract_legend}
 \alias{extract_legend}
-\title{Extract Legend Function}
+\title{Extract Legend Function
+This function extracts a legend from a ggplot object, returning a ggplot object}
 \usage{
 extract_legend(a.gplot)
 }
 \description{
+Extract Legend Function
 This function extracts a legend from a ggplot object, returning a ggplot object
 }

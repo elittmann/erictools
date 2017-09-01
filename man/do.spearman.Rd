@@ -2,7 +2,8 @@
 % Please edit documentation in R/do.spearman.R
 \name{do.spearman}
 \alias{do.spearman}
-\title{Do Spearman Function}
+\title{Do Spearman Function
+This function lets you perform spearman correlations in dplyr syntax.}
 \usage{
 do.spearman(x, y)
 }
@@ -12,6 +13,7 @@ do.spearman(x, y)
 \item{y}{Numeric Outcome}
 }
 \description{
+Do Spearman Function
 This function lets you perform spearman correlations in dplyr syntax.
 }
 \examples{

@@ -2,21 +2,26 @@
 % Please edit documentation in R/humann2_readin.R
 \name{humann2_readin}
 \alias{humann2_readin}
-\title{Humann2 Output Read In}
-\usage{
-humann2_readin(file_dir)
-}
-\description{
+\title{Humann2 Output Read In
 Read in all output files for any number of samples into a list of dataframes, containing gene abundances, pathway abundances, and pathway coverage for each sample
-}
-\details{
 Output information:
 data[[1]] = genefam (gene family abundance table)
 data[[2]] = pathabu (pathway abundance table)
 data[[3]] = pathcov (pathway coverage table)
+Requires pbapply and stringr libraries}
+\usage{
+humann2_readin(file_dir)
+}
+\description{
+Humann2 Output Read In
+Read in all output files for any number of samples into a list of dataframes, containing gene abundances, pathway abundances, and pathway coverage for each sample
+Output information:
+data[[1]] = genefam (gene family abundance table)
+data[[2]] = pathabu (pathway abundance table)
+data[[3]] = pathcov (pathway coverage table)
+Requires pbapply and stringr libraries
 }
 \examples{
 a <- "/Volumes/castoricenter/Eric.Littmann/U01/Processed_Data/Humann2/"
 data <- humann2_readin(a)
-
 }

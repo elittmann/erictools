@@ -2,11 +2,13 @@
 % Please edit documentation in R/gg.stack.el.R
 \name{gg.stack.el}
 \alias{gg.stack.el}
-\title{old ggstack function}
+\title{old ggstack function
+ggstack function that still works on older R version}
 \usage{
 gg.stack.el(..., heights = NULL, gg.extras = NULL, gap = 0, margin = 1,
   units = "inches", as.list = FALSE)
 }
 \description{
+old ggstack function
 ggstack function that still works on older R version
 }
