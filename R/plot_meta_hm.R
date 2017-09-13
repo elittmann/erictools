@@ -25,7 +25,7 @@ plot_meta_hm <- function(data,row_mean_centered=T,organize_by="method"){
       mutate(fc=peak)
     print("using raw peak areas to draw heatmap...")
   }
-  if(organize_by="method"){
+  if(organize_by=="method"){
   #metabolomic heatmap (faceted by method, no clustering)
   meta_gg <- data %>%
     ggplot() +
@@ -39,7 +39,7 @@ plot_meta_hm <- function(data,row_mean_centered=T,organize_by="method"){
     xlab("Sample_ID")
   return(meta_gg)
 
-  }else if(organize_by="cluster"){
+  }else if(organize_by=="cluster"){
 
     #cluster code (still very ugly....)
     xx <- data %>%
