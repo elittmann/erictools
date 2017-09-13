@@ -9,7 +9,7 @@
 #' a <- "/Volumes/castoricenter/Eric.Littmann/U01/Processed_Data/Humann2/"
 #' data <- humann2_readin(a)
 #' @export
-humann2_readin <- function(file_dir){
+read_humann2 <- function(file_dir){
   #requires plyr and dplyr, load plyr first
   setwd(file_dir)
   print("reading in humann2 files...")

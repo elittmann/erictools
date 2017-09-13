@@ -7,7 +7,7 @@
 #' @param min_over10 when TRUE will override na.value and replace na's with minimum value of the compound / 10
 #' @export
 
-metabolomics_readin <- function(directory,na.value=1,min_over10=F){
+read_metabolomics <- function(directory,na.value=1,min_over10=F){
   setwd(dir=directory)
   files <- dir() %>%
     as.data.frame()
