@@ -15,3 +15,6 @@ requires phyloseq, ape, yingtools2, dplyr}
 uparse readin function
 read outputs from Ying's uparse pipeline into a phyloseq object
 }
+\examples{
+phy <- read_uparse("Z:/Eric/uparse")
+}
