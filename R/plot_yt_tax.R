@@ -11,7 +11,7 @@ plot_yt_tax <- function(phylo,pctseqs=T,threshold=.1,taxtextsize=3,labeltextsize
   t <- get.otu.melt(phy)
   pal <- get.yt.palette(t)
 
-  if(pctseqs=F){
+  if(pctseqs==F){
   gg <- t %>%
     arrange(Kingdom, Phylum, Class, Order, Family, Genus, Species) %>%
     mutate(Species = factor(Species, levels = unique(Species))) %>%
