@@ -2,8 +2,7 @@
 #' read outputs from Ying's uparse pipeline into a phyloseq object
 #' @param directory directory containing uparse output files (usually called 'uparse')
 #' requires phyloseq, ape, yingtools2, dplyr
-#' @example
-#' phy <- read_uparse("Z:/Eric/uparse")
+#' @examples phy <- read_uparse("Z:/Eric/uparse")
 #' @export
 
 read_uparse <- function(directory){
