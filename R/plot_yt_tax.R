@@ -49,7 +49,7 @@ plot_yt_tax <- function(phylo,pctseqs=T,threshold=.1,taxtextsize=3,labeltextsize
             axis.text.x=element_text(angle=90,size=labeltextsize)) +
       scale_fill_manual(values=pal) +
       geom_text(aes(x=sample,y=y.text,label=tax.label),lineheight=.6,size=taxtextsize,angle=taxlabelangle) +
-      ylab("Number of Sequences") +
+      ylab("% Relative Abundance") +
       xlab("")
 
     return(gg)
