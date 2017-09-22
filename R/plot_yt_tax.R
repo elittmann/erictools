@@ -6,7 +6,7 @@
 #' @param taxtextsize Font size of labeled taxons
 #' @param labeltextsize Font size of sample labels on the x axis
 #' @export
-plot_yt_tax <- function(phylo,pctseqs=T,threshold=.1,taxtextsize=3,labeltextsize=12){
+plot_yt_tax <- function(phylo,pctseqs=T,threshold=.1,taxtextsize=3,labeltextsize=12,taxlabelangle=90){
 
   t <- get.otu.melt(phy)
   pal <- get.yt.palette(t)
@@ -27,7 +27,7 @@ plot_yt_tax <- function(phylo,pctseqs=T,threshold=.1,taxtextsize=3,labeltextsize
     theme(legend.position="none",
           axis.text.x=element_text(angle=90,size=labeltextsize)) +
     scale_fill_manual(values=pal) +
-    geom_text(aes(x=sample,y=y.text,label=tax.label),lineheight=.6,size=taxtextsize) +
+    geom_text(aes(x=sample,y=y.text,label=tax.label),lineheight=.6,size=taxtextsize,angle=taxlabelangle) +
     ylab("Number of Sequences") +
     xlab("")
 
@@ -48,7 +48,7 @@ plot_yt_tax <- function(phylo,pctseqs=T,threshold=.1,taxtextsize=3,labeltextsize
       theme(legend.position="none",
             axis.text.x=element_text(angle=90,size=labeltextsize)) +
       scale_fill_manual(values=pal) +
-      geom_text(aes(x=sample,y=y.text,label=tax.label),lineheight=.6,size=taxtextsize) +
+      geom_text(aes(x=sample,y=y.text,label=tax.label),lineheight=.6,size=taxtextsize,angle=taxlabelangle) +
       ylab("Number of Sequences") +
       xlab("")
 
