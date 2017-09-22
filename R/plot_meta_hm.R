@@ -36,7 +36,7 @@ plot_meta_hm <- function(data,row_mean_centered=T,organize_by="method",samp_text
     facet_grid(method ~ .,space="free",scales="free_y") +
     theme_bw() +
     theme(strip.text.y=element_text(angle=0,size=14),
-          axis.text.x=element_text(size=sampsize,angle=90),
+          axis.text.x=element_text(size=samp_text_size,angle=90),
           axis.title.y=element_text(size=18,angle=0)) +
     xlab("Sample_ID") +
     ylab("")
@@ -68,7 +68,7 @@ plot_meta_hm <- function(data,row_mean_centered=T,organize_by="method",samp_text
       scale_fill_gradient2(mid="gray92",high="#CD2626",low="navy",midpoint=0) +
       theme_bw() +
       theme(strip.text.y=element_text(angle=0,size=14),
-            axis.text.x=element_text(size=sampsize,angle=90),
+            axis.text.x=element_text(size=samp_text_size,angle=90),
             axis.title.y=element_text(size=18,angle=0)) +
       xlab("Sample_ID") +
       ylab("")
