@@ -36,7 +36,8 @@ plot_meta_hm <- function(data,row_mean_centered=T,organize_by="method"){
     theme(strip.text.y=element_text(angle=0,size=14),
           axis.text.x=element_text(size=18),
           axis.title.y=element_text(size=18,angle=0)) +
-    xlab("Sample_ID")
+    xlab("Sample_ID") +
+    ylab("")
   return(meta_gg)
 
   }else if(organize_by=="cluster"){
@@ -67,7 +68,8 @@ plot_meta_hm <- function(data,row_mean_centered=T,organize_by="method"){
       theme(strip.text.y=element_text(angle=0,size=14),
             axis.text.x=element_text(size=18),
             axis.title.y=element_text(size=18,angle=0)) +
-      xlab("Sample_ID")
+      xlab("Sample_ID") +
+      ylab("")
 
     return(meta_gg)
 
