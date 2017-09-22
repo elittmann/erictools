@@ -61,7 +61,7 @@ plot_meta_hm <- function(data,row_mean_centered=T,organize_by="method"){
     meta_gg <- data %>%
       left_join(clust_order) %>%
       ggplot() +
-      geom_tile(aes(x=Sample_ID,y=reorder(compound,color),fill=fc)) +
+      geom_tile(aes(x=Sample_ID,y=reorder(compound,order),fill=fc)) +
       scale_fill_gradient2(mid="gray92",high="#CD2626",low="navy",midpoint=0) +
       theme_bw() +
       theme(strip.text.y=element_text(angle=0,size=14),
