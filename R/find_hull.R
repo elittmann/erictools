@@ -1,4 +1,5 @@
 #' find hull function
+#'
 #' this function finds convex hull to draw polygons onto 2d pcoa plots per group
 #' @examples
 #' #first create ordination object (ord) using phyloseq

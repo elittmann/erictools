@@ -1,4 +1,6 @@
 #' Humann2 Output Read In
+#'
+#'
 #' Read in all output files for any number of samples into a list of dataframes, containing gene abundances, pathway abundances, and pathway coverage for each sample
 #' Output information:
 #' data[[1]] = genefam (gene family abundance table)

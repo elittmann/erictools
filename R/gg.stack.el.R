@@ -1,4 +1,5 @@
 #' old ggstack function
+#'
 #' ggstack function that still works on older R version
 #' @export
 gg.stack.el <- function(...,heights = NULL,gg.extras=NULL,gap=0,margin=1,units="inches",as.list=FALSE) {

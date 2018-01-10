@@ -1,4 +1,6 @@
 #' metabolomics read in function
+#'
+#'
 #' @details This function reads in directory of csv files, using the filenames for method. Can handle multiple methods from multiple patients at the same time
 #' @details Look in given directory for .csv files, read all into a dataframe, adding method name and cleaning up sample ID. Replace NA values with min/10 per compound or with given value
 #' Requires dplyr, tidyr, stringr, reshape2

@@ -1,4 +1,7 @@
+#' read_uparse
+#'
 #' uparse readin function
+#'
 #' read outputs from Ying's uparse pipeline into a phyloseq object
 #' @param directory directory containing uparse output files (usually called 'uparse')
 #' requires phyloseq, ape, yingtools2, dplyr
@@ -16,6 +19,8 @@ read_uparse <- function(directory){
   biom <- import_biom(biom.file)
   seq <- import_qiime(refseqfilename=seq.file)
   tree <- read.tree.uparse(tree.file)
+  taxa_names(tree) <- gsub("\\_\\_","\\;",taxa_names(tree))
+
   tax <- read.blastn.file(tax.file) %>% set.tax()
   phy <- merge_phyloseq(biom,seq,tree)
   tax_table(phy) <- tax

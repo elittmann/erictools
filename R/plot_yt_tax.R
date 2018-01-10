@@ -1,4 +1,6 @@
 #'General 16S Abundance Plot
+#'
+#'
 #' @details This function reads uparse output files from the specified directory and generates a 16S abundance plot at the species level
 #' @param phylo phyloseq object (can use read_uparse to get uparse outputs into phyloseq...)
 #' @param pctseqs When TRUE will return plots with % abundance, when false will return plots using number of sequences not normalized to 1

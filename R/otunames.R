@@ -1,4 +1,5 @@
 #' otu names function
+#'
 #' this function adds numbers to the front of otu numbers to keep them unique when combining phyloseq objects from different runs
 #' @examples
 #' #need to give unique OTU names in otu and tax table before combining phyloseq objects from 2 mothur runs!

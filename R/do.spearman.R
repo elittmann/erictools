@@ -1,4 +1,5 @@
 #' Do Spearman Function
+#'
 #' This function lets you perform spearman correlations in dplyr syntax.
 #' @param x Numeric Predictor
 #' @param y Numeric Outcome
